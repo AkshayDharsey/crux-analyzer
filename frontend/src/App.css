@@ -1,0 +1,326 @@
+/* App.css - Specific styles for the main App component */
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Header styling */
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.App-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Main content area */
+.App-main {
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section styling */
+.App-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.App-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.App-section-header {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.App-section-header h2 {
+  margin: 0;
+  color: #495057;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.App-section-content {
+  padding: 2rem;
+}
+
+/* Loading states */
+.App-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.App-loading h3 {
+  color: #6c757d;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.App-loading p {
+  color: #adb5bd;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Error states */
+.App-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #dc3545;
+  margin: 1rem 0;
+}
+
+.App-error-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.App-error-message {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Success states */
+.App-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+  margin: 1rem 0;
+}
+
+/* Empty state */
+.App-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #6c757d;
+}
+
+.App-empty-state-icon {
+  font-size: 4rem;
+  color: #dee2e6;
+  margin-bottom: 1rem;
+}
+
+.App-empty-state h3 {
+  color: #495057;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.App-empty-state p {
+  color: #6c757d;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Summary statistics grid */
+.App-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.App-summary-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.App-summary-card h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.App-summary-card .metric-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.App-summary-card .metric-unit {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.App-summary-card .metric-details {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 1.5rem;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-main {
+    padding: 1rem;
+  }
+  
+  .App-section-content {
+    padding: 1.5rem;
+  }
+  
+  .App-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .App-loading,
+  .App-empty-state {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 1rem;
+  }
+  
+  .App-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .App-section-content {
+    padding: 1rem;
+  }
+  
+  .App-summary-card {
+    padding: 1rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Performance indicator styling */
+.performance-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.performance-good {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.performance-needs-improvement {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.performance-poor {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Table styling enhancements */
+.App-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Material-UI overrides */
+.MuiDataGrid-root {
+  border: none;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.MuiDataGrid-cell {
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.MuiDataGrid-row:hover {
+  background-color: #f8f9fa;
+}
